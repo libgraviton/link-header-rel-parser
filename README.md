@@ -1,5 +1,7 @@
 # graviton/link-header-rel-parser
 
+[![Build Status](https://travis-ci.org/libgraviton/link-header-rel-parser.svg?branch=master)](https://travis-ci.org/libgraviton/link-header-rel-parser) [![Latest Stable Version](https://poser.pugx.org/graviton/link-header-rel-parser/v/stable.svg)](https://packagist.org/packages/graviton/link-header-rel-parser) [![Total Downloads](https://poser.pugx.org/graviton/link-header-rel-parser/downloads.svg)](https://packagist.org/packages/graviton/link-header-rel-parser) [![License](https://poser.pugx.org/graviton/link-header-rel-parser/license.svg)](https://packagist.org/packages/graviton/link-header-rel-parser)
+
 This is a small standalone PHP library that helps with parsing _and creating_ `Link` header contents with `rel=""` attributes
 as it is used in the context of RESTful web services.
 
