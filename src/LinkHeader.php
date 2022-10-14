@@ -14,7 +14,7 @@ class LinkHeader
     /**
      * @var LinkHeaderItem[]
      */
-    private $items = [];
+    private $items;
 
     const PATTERN = '/\<(?<uri>.*)\>;(\s?)rel=\"(?<rel>.*)\"/U';
 
@@ -35,9 +35,13 @@ class LinkHeader
      *
      * @return LinkHeader
      */
-    public static function fromString($headerValue)
-    {
+    public static function fromString($headerValue): LinkHeader {
         $matches = [];
+
+        if (empty($headerValue)) {
+            return new self([]);
+        }
+
         preg_match_all(self::PATTERN, $headerValue, $matches, PREG_SET_ORDER);
 
         return new self(
